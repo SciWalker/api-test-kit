@@ -61,3 +61,11 @@ headers = api_config["headers"]
 body = api_config["endpoints"]["post_data"].get("body", {})
 query_params = api_config["endpoints"]["get_data"].get("query_params", {})
 
+# call the api to get the results
+response = requests.request(
+    "GET",
+    endpoint_url,
+    headers=headers)
+# get the response content and convert to dict
+response_dict = json.loads(response.content)
+print(response_dict )
