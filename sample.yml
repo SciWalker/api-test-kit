@@ -1,0 +1,15 @@
+base_url: https://cat-fact.herokuapp.com/facts
+endpoints:
+  get_data:
+    path: /getdata
+    method: GET
+    query_params: {hello: world}
+  post_data:
+    path: /postdata
+    method: POST
+    body:
+      key1: value1
+      key2: value2
+headers:
+  Content-Type: application/json
+  Authorization: Bearer <access_token>
