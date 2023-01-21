@@ -63,7 +63,7 @@ query_params = api_config["endpoints"]["get_data"].get("query_params", {})
 
 # call the api to get the results
 response = requests.request(
-    "GET",
+    "POST",
     endpoint_url,
     headers=headers)
 # get the response content and convert to dict
